@@ -6,10 +6,13 @@ import com.hnb.demo.dp.factory.entity.WhiteHuman;
 import com.hnb.demo.dp.factory.entity.YellowHuman;
 
 /**
+ * 工厂模式：
+ * 
+ *
  * @author xiaolu
  * @date 2018/7/31 上午9:31
  */
-public class TestMain {
+public class FactoryMain {
     public static void main(String[] args) {
         System.out.println("<<======BASE PATTERN======>>");
         basePattern();
