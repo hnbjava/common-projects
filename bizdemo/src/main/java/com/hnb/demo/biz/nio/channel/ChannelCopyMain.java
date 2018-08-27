@@ -1,5 +1,6 @@
 package com.hnb.demo.biz.nio.channel;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
@@ -13,7 +14,7 @@ import java.nio.channels.WritableByteChannel;
 public class ChannelCopyMain {
     public static void main(String[] args) throws IOException {
         ReadableByteChannel source = Channels.newChannel(System.in);
-        WritableByteChannel dest = Channels.newChannel(System.out);
+        WritableByteChannel dest = Channels.newChannel(new FileOutputStream("ssss.txt"));
 //        channelCopy(source, dest);
         channelCopyEx(source, dest);
         source.close();

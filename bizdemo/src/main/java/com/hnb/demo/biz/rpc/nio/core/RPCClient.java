@@ -36,7 +36,7 @@ public class RPCClient {
             // 获取socket通道
             channel = SocketChannel.open(isa);
 
-            // 连接服务器
+            // channel 设置非阻塞
             channel.configureBlocking(false);
 
             channel.register(selector, SelectionKey.OP_READ);

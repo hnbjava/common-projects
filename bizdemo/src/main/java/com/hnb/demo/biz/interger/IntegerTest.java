@@ -15,6 +15,7 @@ public class IntegerTest {
         Integer b1 = 128;
         Integer d1 = 128;
         System.out.println(b1 == d1);
+        System.out.println(b1.equals(d1));
 
         // Error:(19, 19) java: 不兼容的类型: 从double转换到float可能会有损失
         //float f = 3.4;
