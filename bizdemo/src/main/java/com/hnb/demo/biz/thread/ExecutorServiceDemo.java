@@ -10,6 +10,9 @@ import java.util.concurrent.Executors;
 public class ExecutorServiceDemo {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
+        ExecutorService executorService2 = Executors.newSingleThreadExecutor();
+        ExecutorService executorService3 = Executors.newScheduledThreadPool(10);
+        ExecutorService executorService4 = Executors.newCachedThreadPool();
         while (true){
             executorService.execute(new MyThread());
         }

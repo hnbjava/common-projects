@@ -18,6 +18,7 @@
         <module>dynamicproxy</module>
         <module>designpattern</module>
         <module>bizdemo</module>
+        <module>springboot</module>
     </modules>
 
 

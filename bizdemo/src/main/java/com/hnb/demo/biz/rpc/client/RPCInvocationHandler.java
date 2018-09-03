@@ -22,6 +22,7 @@ public class RPCInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("Invoke");
         Socket socket = null;
         ObjectOutputStream output = null;
         ObjectInputStream input = null;

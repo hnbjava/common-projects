@@ -7,7 +7,7 @@ package com.hnb.demo.biz.thread;
 public class ThreadMain {
 
     public static void main(String[] args) {
-//        testSynchronizedThread();
+        testSynchronizedThread();
         testNotSynchronizedThread();
     }
 

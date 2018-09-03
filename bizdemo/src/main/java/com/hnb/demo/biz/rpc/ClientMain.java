@@ -12,5 +12,7 @@ import java.net.InetSocketAddress;
 public class ClientMain {
     public static void main(String[] args) {
         HelloService service = RPCClient.getRemoteProxyObj(HelloService.class, new InetSocketAddress("localhost", 8088));
+        System.out.println(service.sayHi("5678"));
+        System.out.println(service.sayHi("56778"));
     }
 }
