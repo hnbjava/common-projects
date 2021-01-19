@@ -9,13 +9,25 @@ import java.io.*;
 public class ReadFile {
     public static void main(String[] args) {
         try {
-            File file = new File("/Users/xiaolu/Documents/GitHub/hannibal/bizdemo/src/main/resources/text.txt");
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String data = reader.readLine();
-            while (data != null) {
-                System.out.println(data);
-                data = reader.readLine();
+            File outfile = new File("C:\\Users\\hnbcao\\Desktop\\output\\alldata2");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outfile));
+
+            for (int i = 10700; i < 10751; i++) {
+                File file = new File("C:\\Users\\hnbcao\\Desktop\\output\\data-" + i);
+                BufferedReader reader = new BufferedReader(new FileReader(file));
+                String data = reader.readLine();
+                while (data != null) {
+                    data= data.replace("][","]rickdata[");
+                    String[] list = data.split("rickdata");
+                    for (String s : list) {
+                        writer.write(s);
+                        writer.newLine();
+                    }
+                    data = reader.readLine();
+                }
+                reader.close();
             }
+            writer.close();
         } catch (IOException e) {
 
         }

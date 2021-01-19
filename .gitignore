@@ -5,3 +5,6 @@
 .idea/
 *.jar
 bizdemo/target/**
+/mnt/
+/log2jdemo/target/
+/logbackdemo/target/
