@@ -8,3 +8,5 @@ bizdemo/target/**
 /mnt/
 /log2jdemo/target/
 /logbackdemo/target/
+*.xls
+*.xlsx

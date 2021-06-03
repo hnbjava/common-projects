@@ -23,13 +23,13 @@ public class TableDataCreator {
 
     private static List<TableData> createList(String tableName) {
         List<TableData> dataList = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             long receiveTime = calendar.getTimeInMillis();
 //            calendar.setTime(new Date(receiveTime + 1000));
             TableData record = new TableData();
             Map<String, Serializable> values = new HashMap<>();
             values.put("device_code", "Q1000100010031000-S001" + i);
-            values.put("receive_time", receiveTime);
+            values.put("receive_data", receiveTime);
             values.put("create_date", String.valueOf(receiveTime));
             values.put("data01", i);
             values.put("data02", i);
@@ -41,13 +41,13 @@ public class TableDataCreator {
     }
 
     public static String createListString(int id) {
-        StringJoiner joiner = new StringJoiner("");
-        joiner.add("test_table");
-        if (id < 10) {
-            joiner.add("0");
-        }
-        joiner.add(String.valueOf(id));
-        return JSON.toJSONString(createList(joiner.toString()));
+//        StringJoiner joiner = new StringJoiner("");
+//        joiner.add("test_table");
+//        if (id < 10) {
+//            joiner.add("0");
+//        }
+//        joiner.add(String.valueOf(id));
+        return JSON.toJSONString(createList("test_table"));
     }
 
     public static void main(String[] args) {
